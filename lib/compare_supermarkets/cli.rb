@@ -43,14 +43,24 @@ class CompareSupermarkets::CLI
         puts ""
         puts ""
         if CompareSupermarkets::Product.all_count > 10
+            puts ""
             puts "Ooo, jeez, seems like we have a lot of results."
             puts "We have #{CompareSupermarkets::Product.all_count} results for you."
             puts "If you were a little more specific with your search"
             puts "term, we would have less to sort through..."
             puts ""
             change_search_term
+        elsif CompareSupermarkets::Product.all_count == 0
+            puts ""
+            puts "Ohhh man! Doesn't seem like either supermarket carry"
+            puts "that product."
+            puts ""
+            change_search_term
         else
+            puts ""
             puts "Great! We have #{CompareSupermarkets::Product.all_count} items for you."
+            puts ""
+            puts ""
             puts ""
             how_to_display
         end
@@ -67,8 +77,16 @@ class CompareSupermarkets::CLI
             start
         elsif input == "n"
             puts ""
-            puts "No worries,"
-            how_to_display
+            puts "No worries"
+            puts ""
+            if CompareSupermarkets::Product.all_count > 0
+                how_to_display
+            else
+                puts ""
+                puts "Have a great day!"
+                puts ""
+                exit
+            end
         elsif input.empty?
             invalid_input
             change_search_term
@@ -190,7 +208,7 @@ class CompareSupermarkets::CLI
     end
 
     def anything_else
-        puts "Can we help you compare anything else today? (y/n)"
+        puts "Can we help you compare anything else today? (Y/N)"
         answer = gets.strip.downcase
         if answer == "n"
             puts ""
@@ -244,7 +262,9 @@ class CompareSupermarkets::CLI
         choice.each do |item|
             p "Supermarket: #{item.supermarket}"
             p "Item name: #{item.name}"
-            p item.price.empty? ? "Item price: $#{item.dollar_value}.#{item.cent_value} / #{item.unit_size}" : "Item price: $#{item.price}"
+            p "Item price: $#{item.dollar_value}.#{item.cent_value}"
+            p "Item unit size: #{item.unit_size}"
+            p item.price.empty? ? "Unit price: $#{item.dollar_value}.#{item.cent_value} / #{item.unit_size}" : "Unit price: $#{item.price}"
             p "#{item.url}"
             puts ""
         end
