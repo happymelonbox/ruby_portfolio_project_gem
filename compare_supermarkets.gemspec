@@ -42,8 +42,7 @@ and there will be less items to compare.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/happymelonbox/ruby_po
-rtfolio_project_gem.
+Bug reports and pull requests are welcome on GitHub at https://github.com/happymelonbox/compare_supermarkets
 
 ## License
 
@@ -55,8 +54,8 @@ The gem is available as open source under the terms of the [MIT License](https:/
   spec.required_ruby_version = ">= 2.4.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/happymelonbox/ruby_portfolio_project_gem"
-  spec.metadata["changelog_uri"] = "https://github.com/happymelonbox/ruby_portfolio_project_gem/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/happymelonbox/compare_supermarkets"
+  spec.metadata["changelog_uri"] = "https://github.com/happymelonbox/compare_supermarkets/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

@@ -27,7 +27,7 @@ and there will be less items to compare.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/happymelonbox/ruby_portfolio_project_gem.
+Bug reports and pull requests are welcome on GitHub at https://github.com/happymelonbox/compare_supermarkets.
 
 ## License
 
