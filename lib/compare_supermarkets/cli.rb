@@ -42,15 +42,15 @@ class CompareSupermarkets::CLI
         self.search_supermarkets(input)
         puts ""
         puts ""
-        if CompareSupermarkets::Product.all_count > 10
+        if CompareSupermarkets::Product.count > 10
             puts ""
             puts "Ooo, jeez, seems like we have a lot of results."
-            puts "We have #{CompareSupermarkets::Product.all_count} results for you."
+            puts "We have #{CompareSupermarkets::Product.count} results for you."
             puts "If you were a little more specific with your search"
             puts "term, we would have less to sort through..."
             puts ""
             change_search_term
-        elsif CompareSupermarkets::Product.all_count == 0
+        elsif CompareSupermarkets::Product.count == 0
             puts ""
             puts "Ohhh man! Doesn't seem like either supermarket carry"
             puts "that product."
@@ -58,7 +58,7 @@ class CompareSupermarkets::CLI
             change_search_term
         else
             puts ""
-            puts "Great! We have #{CompareSupermarkets::Product.all_count} items for you."
+            puts "Great! We have #{CompareSupermarkets::Product.count} items for you."
             puts ""
             puts ""
             puts ""
@@ -79,7 +79,7 @@ class CompareSupermarkets::CLI
             puts ""
             puts "No worries"
             puts ""
-            if CompareSupermarkets::Product.all_count > 0
+            if CompareSupermarkets::Product.count > 0
                 how_to_display
             else
                 puts ""

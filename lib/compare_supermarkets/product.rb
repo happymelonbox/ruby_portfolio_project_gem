@@ -26,7 +26,7 @@ class CompareSupermarkets::Product
         @all
     end
 
-    def self.all_count
+    def self.count
         @@all.count
     end
 
@@ -54,7 +54,7 @@ class CompareSupermarkets::Product
         sorted = @@all.sort_by! do |s|
             price_to_sort = s.dollar_value + '.' + s.cent_value
             price_to_sort.to_f
-            end
+        end
     end
 
     def self.all_top_10_sorted_by_price
