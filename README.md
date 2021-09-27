@@ -1,6 +1,6 @@
-# CompareSupermarkets
-
-Ever wondered "I wonder if my shampoo is cheaper at Coles or Woolworths...?" ? But can't be bothered searching both websites and comparing? Well that's what this gem does for you. Simply install and follow the prompts.
+Ever wondered 'I wonder if my shampoo is cheaper at Coles or Woolworths...?' ? But can't be
+bothered searching both websites and comparing? Well that's what this gem does for you. Simply
+install and follow the prompts.
 
 ## Installation
 
@@ -20,15 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-To use compare_supermarkets call $ gem 'compare_supermarkets'
-and follow the prompts. The more specific you are the faster the search results appear
+To use compare_supermarkets call $ 'compare_supermarkets' and follow the prompts. 
+The more specific you are the faster the search results appear
 and there will be less items to compare.
 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/compare_supermarkets.
+Bug reports and pull requests are welcome on GitHub at https://github.com/happymelonbox/ruby_portfolio_project_gem.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](https://opensource.org
+/licenses/MIT).
