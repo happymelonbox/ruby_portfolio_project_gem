@@ -113,6 +113,10 @@ class CompareSupermarkets::CLI
         puts ""
         input = gets.strip
         puts ""
+        choice(input)
+    end
+    
+    def choice(input)
         if input == "1"
             choice = CompareSupermarkets::Product.all_top_10_sorted_by_price
             print_items(choice, "asc")
@@ -140,7 +144,6 @@ class CompareSupermarkets::CLI
             invalid_input
             how_to_display
         end
-
     end
 
     def finished
